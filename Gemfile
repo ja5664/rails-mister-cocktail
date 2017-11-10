@@ -48,6 +48,12 @@ ruby '2.3.5'
 # Adding figaro for API key security
 gem 'figaro'
 
+# Adding cloudinary for images that are not assets
+gem 'cloudinary'
+
+# Adding carrierwave to make for easier uploading
+gem 'carrierwave', '~> 1.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
