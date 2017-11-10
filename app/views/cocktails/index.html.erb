@@ -1,0 +1,28 @@
+<h1>Cocktails with Cris - Niiiiice!!!</h1>
+<%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary" %>
+  <div class="container">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+      <div class="wrap">
+      <div class="show">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.capital8bysodexo.com/wp-content/themes/capital8-2/img-src/espaces/logo-espace-cocktail-select.png');">
+      </div>
+      </div>
+      <div class="no-show">
+   <!--    <div class="card-category">Popular</div> -->
+      <div class="card-description">
+        <h2> <%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+        <p>
+          <%= link_to "Edit", edit_cocktail_path(cocktail) %>
+          <%= link_to "Delete", cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?"} %>
+        </p>
+      </div>
+      </div>
+      <!-- <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay"> -->
+      <%= link_to "", cocktail_path(cocktail), class: "card-link" %>
+     </div>
+      </div>
+    <% end %>
+    </div>
+  </div>

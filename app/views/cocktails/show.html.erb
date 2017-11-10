@@ -1,0 +1,12 @@
+<div class="ingredient">
+  <ul>
+  <% @cocktail.doses.each do |dose| %>
+  <li><%= dose.description %> <%= dose.ingredient.name%></li>
+  <% end %>
+</ul>
+</div>
+
+<%= render "doses/form", cocktail: @cocktail %>
+<%= link_to 'add a dose', new_cocktail_dose_path(@cocktail) %>
+<%= link_to "Home", cocktails_path %>
+
