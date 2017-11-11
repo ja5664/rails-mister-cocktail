@@ -1,28 +1,79 @@
-<h1>Cocktails with Cris - Niiiiice!!!</h1>
-<%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary" %>
-  <div class="container">
-    <div class="row">
-      <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-4">
-      <div class="wrap">
-      <div class="show">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.capital8bysodexo.com/wp-content/themes/capital8-2/img-src/espaces/logo-espace-cocktail-select.png');">
+ <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= cl_image_path "itvmbhlgna5yjsgefss5", width: 1440, height: 1024, crop: :fill %>);">
+  <div class="title">
+<!--      <h1>Cocktails with Cris - Niiiiice!!!</h1> -->
+  </div>
+    <div class="index-container">
+      <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary text-center" %>
+      <div class="cocktail-container">
+        <hr>
+        <h2>Most Recent Cocktails</h2>
+        <% @most_recent_cocktails.each_with_index do |cocktail, index| %>
+          <p>
+            <% index = index + 1 %>
+            <%= index %> )
+            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            <%= link_to icon('pencil-square-o'), edit_cocktail_path(cocktail) %>
+            <%= link_to icon('trash-o'), cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?"} %>
+          </p>
+        <% end %>
+
+   <!--    <div class="cocktail-container">
+        <% @cocktails.each_with_index do |cocktail, index| %>
+          <p>
+            <% index = index + 1 %>
+            <%= index %> )
+            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            <%= link_to icon('pencil-square-o'), edit_cocktail_path(cocktail) %>
+            <%= link_to icon('trash-o'), cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?"} %>
+          </p>
+        <% end %> -->
       </div>
+    </div>
+    <div class="details-container">
+
+<div class="card1">
+  <div class="card">
+    <div class="content">
+      <div class="front">
+        Fancy a Margerita?
       </div>
-      <div class="no-show">
-   <!--    <div class="card-category">Popular</div> -->
-      <div class="card-description">
-        <h2> <%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-        <p>
-          <%= link_to "Edit", edit_cocktail_path(cocktail) %>
-          <%= link_to "Delete", cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?"} %>
-        </p>
+        <div class="back">
+          Well you can't have one as I didnt code it!
+        </div>
       </div>
-      </div>
-      <!-- <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay"> -->
-      <%= link_to "", cocktail_path(cocktail), class: "card-link" %>
-     </div>
-      </div>
-    <% end %>
     </div>
   </div>
+</div>
+
+<div class="card2">
+  <div class="card">
+    <div class="content">
+      <div class="front">
+        Fancy a Margerita?
+      </div>
+        <div class="back">
+          Well you can't have one as I didnt code it!
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card3">
+  <div class="card">
+    <div class="content">
+      <div class="front">
+        Fancy a Margerita?
+      </div>
+        <div class="back">
+          Well you can't have one as I didnt code it!
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+
+

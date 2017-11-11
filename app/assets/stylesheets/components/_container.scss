@@ -1,0 +1,51 @@
+.index-container {
+  height: 65vh;
+  width: 35%;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  // background-size: cover !important;
+  // background-position: center;
+  color: lightgrey;
+  background-color: white;
+  position: absolute;
+  left: 8%;
+  bottom: -5%;
+  border-radius: 3px;
+  opacity: 0.8;
+  box-shadow: 1px 1px 1px black;
+  padding: 0;
+
+}
+
+.details-container {
+  height: 70vh;
+  width: 50%;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  // background-size: cover !important;
+  // background-position: center;
+  color: lightgrey;
+  position: absolute;
+  right: 10%;
+  bottom: -5%;
+  border-radius: 3px;
+  opacity: 0.8;
+  box-shadow: 1px 1px 1px black;
+  padding: 0;
+
+}
+
+.cocktail-container p {
+  font-size: 14px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+.cocktail-container a {
+  font-size: 14px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 0;
+  color: black;
+  text-decoration: none;
+}

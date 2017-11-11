@@ -1,6 +1,7 @@
 class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all
+    @most_recent_cocktails = Cocktail.order(created_at: :desc).limit(5)
   end
 
   def new

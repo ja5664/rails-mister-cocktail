@@ -15,20 +15,21 @@
     <div class="navbar-wagon">
     <!-- Logo -->
     <a href="/" class="navbar-wagon-brand">
-      image_tag("logo")
+       <%= cl_image_tag "kbunw0r9qb2tzosmp7b0",width: 60, height: 50%>
     </a>
 
     <!-- Right Navigation -->
     <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-      <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
+<!--       <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
       <a href="" class="navbar-wagon-item navbar-wagon-link">Trips</a>
-      <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
+      <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a> -->
 
       <!-- Profile picture with dropdown list -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+          <%= cl_image_tag "ebi2zgh4934nb04wmhzi",width: 100, height: 100, crop: :fill, class: "avatar dropdown-toggle" %>
+       <!--    , class: "avatar dropdown-toggle" id:"navbar-wagon-menu" data-toggle:"dropdown"%> -->
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li><a href="#">Profile</a></li>
             <li><a href="#">Dashboard</a></li>
@@ -50,8 +51,6 @@
       </div>
     </div>
   </div>
-    <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://picsum.photos/40/120/?random');">
-    </div>
     <%= yield %>
   </body>
 </html>
